@@ -25,7 +25,7 @@
 
 <h3>Задание 4</h3>
 
-<input id="resText" type="text" size="100" value="">
+<div id="resDiv"></div>
 <br>
 <input id="But6" type="button" value="Запуск функции">
 <br>
@@ -130,7 +130,7 @@
             } else {
                 console.log(`Елемент ${getNum} СОВПАЛ!!!`)
             }
-            document.getElementById('resText').setAttribute('value', `Рассматриваем число ${getNum}, массив заполенен на ${arrRes.length} элементов`);
+        document.getElementById('resDiv').innerText = `Рассматриваем число ${getNum}, массив заполенен на ${arrRes.length} элементов`;
     }
     function handleBut7ClickShow () {
             console.log(arrRes);
