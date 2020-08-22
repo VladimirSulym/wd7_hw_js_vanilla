@@ -10,7 +10,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ac9b434-e3ca-4ab5-9ed8-44ba12cf7d29" name="Default Changelist" comment="Start">
+    <list default="true" id="1ac9b434-e3ca-4ab5-9ed8-44ba12cf7d29" name="Default Changelist" comment="finish task 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Index.html" afterDir="false" />
     </list>
@@ -52,7 +52,10 @@
       <updated>1597086135889</updated>
       <workItem from="1597086138257" duration="227000" />
       <workItem from="1597935966020" duration="17000" />
-      <workItem from="1597935998228" duration="3621000" />
+      <workItem from="1597935998228" duration="4041000" />
+      <workItem from="1598083412374" duration="5259000" />
+      <workItem from="1598091456339" duration="1332000" />
+      <workItem from="1598098539149" duration="2927000" />
     </task>
     <task id="LOCAL-00001" summary="Start">
       <created>1597086228653</created>
@@ -61,7 +64,14 @@
       <option name="project" value="LOCAL" />
       <updated>1597086228653</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="finish task 1">
+      <created>1597941198702</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1597941198702</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -81,6 +91,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Start" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start" />
+    <MESSAGE value="finish task 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish task 1" />
   </component>
 </project>

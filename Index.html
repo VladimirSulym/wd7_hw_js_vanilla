@@ -6,9 +6,30 @@
 </head>
 <body>
 
+<h3>Задание 1</h3>
 <input id="But1" type="button" value="Кнопка 1">
 <br>
-<input id="But2" type="button" value="Кнопка 1">
+<input id="But2" type="button" value="Кнопка 2">
+
+<h3>Задание 2</h3>
+<p id="myP">
+    Абзац для перекрашивания
+</p>
+
+<h3>Задание 3</h3>
+<input id="But3" type="button" value="Кнопка 3">
+<br>
+<input id="But4" type="button" value="Кнопка 4">
+<br>
+<input id="But5" type="button" value="Кнопка 5">
+
+<h3>Задание 4</h3>
+
+<input id="resText" type="text" size="100" value="">
+<br>
+<input id="But6" type="button" value="Запуск функции">
+<br>
+<input id="But7" type="button" value="Показать массив в консоле">
 
 <script>
     // 1) Даны 2 кнопки. Привяжите к каждой кнопке событие по клику, которое будет считать количество нажатий по
@@ -25,11 +46,11 @@
      document.getElementById('But2').addEventListener('click', handleBut2ClickSum);
     
     function handleBut1ClickSum () {
-        this.value = `Кол-во кликов ${++sumClickBut1}`;
+        this.value = `Кол-во кликов на кнопку 1 - ${++sumClickBut1}`;
     }
 
     function handleBut2ClickSum () {
-        this.value = `Кол-во кликов ${++sumClickBut2}`;
+        this.value = `Кол-во кликов на кнопку 2 - ${++sumClickBut2}`;
     }
 
     // 2) Дан массив из 10 цветов (элементы массива - это строки с кодом цвета в 16ти ричной СС). Даны 3  абзаца
@@ -41,8 +62,40 @@
 
     // Предварительно получив доступ к параграфу текста через getElementById и сохранив его в переменную (myParagraph)
 
+    var arrColor = ['#FF5546', '#8da988','#1a2c9d','#bca014','#FF0546','#1aFF9d','#005546','#FF0046','#8da9FF','#FFFFFF'];
+
+    document.getElementById('myP').addEventListener('click', handleMyPClickColor);
+
+    var lenArr = 0;
+
+    function handleMyPClickColor () {
+        if (lenArr < arrColor.length) {
+            this.style.color = (arrColor[lenArr]);
+            lenArr++;
+        } else {
+            lenArr = 0;
+            this.style.color = (arrColor[lenArr]);
+            lenArr++;
+        }
+    }
+
+
     // 3) Даны 3 кнопки. Каждая кнопка по нажатию на нее выводить следующее число Фибоначчи.
     // Кнопки работают независимо. Решить через замыкания
+
+    var FibonachiDO = 0;
+    var Fibonachi = 1;
+
+    document.getElementById('But3').addEventListener('click', handleButClickFib);
+    document.getElementById('But4').addEventListener('click', handleButClickFib);
+    document.getElementById('But5').addEventListener('click', handleButClickFib);
+
+    function handleButClickFib () {
+        var res = FibonachiDO + Fibonachi;
+        FibonachiDO = Fibonachi;
+        Fibonachi = res;
+        this.value = `число Фибоначчи на данном клике - ${res}`;
+    }
 
     // 4) Сделайте функцию, каждый вызов который будет генерировать и возвращать случайное число от 1 до 100,
     // но так, чтобы они не повторялись, пока не будут перебраны все числа из этого промежутка.
@@ -52,6 +105,36 @@
     // function randomVal(min, max) {
     //    return Math.floor(min + Math.random() * (max + 1 - min));
     // }
+
+    var arrRes = [];
+
+    document.getElementById('But6').addEventListener('click', handleBut6ClickFib);
+    document.getElementById('But7').addEventListener('click', handleBut7ClickShow);
+
+    function randomVal(min, max) {
+            return Math.floor(min + Math.random() * (max + 1 - min));
+         }
+
+    function handleBut6ClickFib () {
+        var getNum = randomVal(1, 100);
+        var flag = true;
+
+            for (var i=0; i<=arrRes.length; i++) {
+                if (arrRes[i] === getNum) {
+                    flag = false
+                    break
+                }
+            }
+            if (flag) {
+                arrRes.push(getNum);
+            } else {
+                console.log(`Елемент ${getNum} СОВПАЛ!!!`)
+            }
+            document.getElementById('resText').setAttribute('value', `Рассматриваем число ${getNum}, массив заполенен на ${arrRes.length} элементов`);
+    }
+    function handleBut7ClickShow () {
+            console.log(arrRes);
+    }
 
 </script>
 </body>
